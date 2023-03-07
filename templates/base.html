@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} - Forum</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <nav>
+        <h1><a href="{{ url_for('index') }}">Forum</a></h1>
+    </nav>
+</head>
+
+<section class="content">
+    <header>
+        {% block header %}{% endblock %}
+    </header>
+    {% block content %}{% endblock %}
+</section>
+
+<!--
+<body>
+    <h1>Welcome to the CodeConda Web App!</h1>
+    <p>Enter any number, and we'll multiply it by 500.</p>
+    <form method="post">
+        <div class="form-group">
+            <input type="number" id="number" name="number" required>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <p>{{ result }}</p>
+</body>
+-->
+
+</html>
